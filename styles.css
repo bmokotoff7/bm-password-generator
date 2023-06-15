@@ -23,6 +23,12 @@ body {
     color: #D5D4D8;
 }
 
+#character-selection {
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
 #generate-password-btn {
     background: #10B981;
     border: none;
