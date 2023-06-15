@@ -1,0 +1,60 @@
+body {
+    background: #1F2937;
+    font-family: 'Inter', sans-serif;
+    font-size: medium;
+}
+
+#app-content {
+    margin: 30px 40px;
+    width: 500px;
+}
+
+#heading-text {
+    font-family: 'Karla', sans-serif;
+    color: white;
+    margin: 0;
+}
+
+#heading-green-text {
+    color: #4ADF86;
+}
+
+.subheading-text {
+    color: #D5D4D8;
+}
+
+#generate-password-btn {
+    background: #10B981;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: medium;
+    font-weight: 500;
+    padding: 10px 16px;
+    margin: 20px 0 30px;
+}
+
+#generated-passwords {
+    border-top: 1px solid #2F3E53;
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    padding: 20px 0;
+}
+
+.generated-password-field {
+    background: #273549;
+    border-radius: 6px;
+    width: 200px;
+    text-align: center;
+    padding: 10px 15px;
+}
+
+.password-text-dark {
+    color: #55F991;
+}
+
+.password-text-light {
+    color: #5DEF92;
+}
