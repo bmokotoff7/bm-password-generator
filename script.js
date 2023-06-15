@@ -12,10 +12,9 @@ let uppercaseCheckboxEl = document.getElementById("uppercase-cb")
 let lowercaseCheckboxEl = document.getElementById("lowercase-cb")
 let numbersCheckboxEl = document.getElementById("numbers-cb")
 let symbolsCheckboxEl = document.getElementById("symbols-cb")
+let passwordLengthEl = document.getElementById("length-input")
 let password1El = document.getElementById("password1")
 let password2El = document.getElementById("password2")
-
-let passwordLength = 15
 
 function generatePasswords() {
     // determine available characters
@@ -42,12 +41,12 @@ function generatePasswords() {
     }
     // generate both passwords
     let password1 = ""
-    for (let i = 0; i <= passwordLength; i++) {
+    for (let i = 0; i < passwordLengthEl.value; i++) {
         let randomInt = Math.floor(Math.random() * availableCharacters.length)
         password1 += availableCharacters[randomInt]
     }
     let password2 = ""
-    for (let i = 0; i <= passwordLength; i++) {
+    for (let i = 0; i < passwordLengthEl.value; i++) {
         let randomInt = Math.floor(Math.random() * availableCharacters.length)
         password2 += availableCharacters[randomInt]
     }

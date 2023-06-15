@@ -29,6 +29,11 @@ body {
     flex-direction: column;
 }
 
+#password-length-selection {
+    color: white;
+    display: flex;
+}
+
 #generate-password-btn {
     background: #10B981;
     border: none;
