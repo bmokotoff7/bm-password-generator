@@ -14,14 +14,16 @@ let passwordLengthSliderEl = document.getElementById("length-slider")
 let generatePasswordBtnEl = document.getElementById("generate-password-btn")
 let password1El = document.getElementById("password1")
 let password1CopiedEl = document.getElementById("password1-copy-text")
-let password2CopiedEl = document.getElementById("password2-copy-text")
 let password2El = document.getElementById("password2")
+let password2CopiedEl = document.getElementById("password2-copy-text")
 
 function generatePasswords() {
     // reset password created boolean to false and clear copy text
     passwordCreated = false
     password1CopiedEl.textContent = ""
     password2CopiedEl.textContent = ""
+    password1El.style.border = "2px solid #273549"
+    password2El.style.border = "2px solid #273549"
     // determine available characters
     let availableCharacters = []
     if (uppercaseCheckboxEl.checked) {
@@ -45,7 +47,12 @@ function generatePasswords() {
         }
     }
     // determine password length
-    
+    if (passwordLengthEl.value < 8) {
+        passwordLengthEl.value = 8
+    }
+    else if (passwordLengthEl.value > 50) {
+        passwordLengthEl.value = 50
+    }
     // generate both passwords
     if (availableCharacters.length > 0) {
         let password1 = ""
@@ -92,11 +99,17 @@ function updateSliderPosition(newPosition) {
 function copyPassword(passwordText, id) {
     if (passwordCreated) {
         navigator.clipboard.writeText(passwordText)
-    }
-    if (id === "password1") {
-        password1CopiedEl.textContent = "Copied!"
-    }
-    else if (id === "password2") {
-        password2CopiedEl.textContent = "Copied!"
+        if (id === "password1") {
+            password1CopiedEl.textContent = "Copied!"
+            password1El.style.border = "2px solid #55F991"
+            password2CopiedEl.textContent = ""
+            password2El.style.border = "2px solid #273549"
+        }
+        else if (id === "password2") {
+            password2CopiedEl.textContent = "Copied!"
+            password2El.style.border = "2px solid #55F991"
+            password1CopiedEl.textContent = ""
+            password1El.style.border = "2px solid #273549"
+        }
     }
 }
