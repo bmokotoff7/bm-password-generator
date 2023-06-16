@@ -27,11 +27,76 @@ body {
     color: white;
     display: flex;
     flex-direction: column;
+    margin: 10px 0;
+}
+
+.character-cb-with-label {
+    margin: 4px 0;
+    display: flex;
+    max-width: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type = "checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    height: 25px;
+    width: 25px;
+    margin: 3px 10px;
+    background: #2F3E53;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
+
+input[type = "checkbox"]:hover {
+    background: #50698C;
+}
+
+input[type = "checkbox"]:checked {
+    background: #10B981;
+}
+
+input[type = "checkbox"]:after {
+    background: #10B981;
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    color: white;
+    display: none;
+}
+
+input[type = "checkbox"]:checked::after {
+    display: block;
 }
 
 #password-length-selection {
     color: white;
     display: flex;
+    max-width: fit-content;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+#length-input {
+    width: 40px;
+    margin: 0 10px;
+    padding: 8px;
+    background: #2F3E53;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: large;
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 #generate-password-btn {
@@ -47,7 +112,7 @@ body {
 }
 
 #generated-passwords {
-    border-top: 1px solid #2F3E53;
+    border-top: 2px solid #2F3E53;
     display: flex;
     justify-content: space-between;
     width: auto;
@@ -70,3 +135,4 @@ body {
 .password-text-light {
     color: #5DEF92;
 }
+

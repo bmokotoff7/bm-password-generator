@@ -13,6 +13,7 @@ let lowercaseCheckboxEl = document.getElementById("lowercase-cb")
 let numbersCheckboxEl = document.getElementById("numbers-cb")
 let symbolsCheckboxEl = document.getElementById("symbols-cb")
 let passwordLengthEl = document.getElementById("length-input")
+let generatePasswordBtnEl = document.getElementById("generate-password-btn")
 let password1El = document.getElementById("password1")
 let password2El = document.getElementById("password2")
 
@@ -40,17 +41,32 @@ function generatePasswords() {
         }
     }
     // generate both passwords
-    let password1 = ""
-    for (let i = 0; i < passwordLengthEl.value; i++) {
-        let randomInt = Math.floor(Math.random() * availableCharacters.length)
-        password1 += availableCharacters[randomInt]
+    if (availableCharacters.length > 0) {
+        let password1 = ""
+        for (let i = 0; i < passwordLengthEl.value; i++) {
+            let randomInt = Math.floor(Math.random() * availableCharacters.length)
+            password1 += availableCharacters[randomInt]
+        }
+        let password2 = ""
+        for (let i = 0; i < passwordLengthEl.value; i++) {
+            let randomInt = Math.floor(Math.random() * availableCharacters.length)
+            password2 += availableCharacters[randomInt]
+        }
+        // display passwords to user
+        password1El.textContent = password1
+        password2El.textContent = password2
     }
-    let password2 = ""
-    for (let i = 0; i < passwordLengthEl.value; i++) {
-        let randomInt = Math.floor(Math.random() * availableCharacters.length)
-        password2 += availableCharacters[randomInt]
+}
+
+// Styles the generate password button depending on checkbox states
+function styleGenerateBtn() {
+    if (!uppercaseCheckboxEl.checked &&
+        !lowercaseCheckboxEl.checked &&
+        !numbersCheckboxEl.checked &&
+        !symbolsCheckboxEl.checked) {
+            generatePasswordBtnEl.style.background = "#2F3E53"
     }
-    // display passwords to user
-    password1El.textContent = password1
-    password2El.textContent = password2
+    else {
+        generatePasswordBtnEl.style.background = "#10B981"
+    }
 }

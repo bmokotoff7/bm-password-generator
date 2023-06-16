@@ -5,6 +5,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     </head>
     <body>
         <div id="app-content">
@@ -14,19 +15,19 @@
                 <!-- Click the generated password to copy to your clipboard.</p> -->
             <div id="character-selection">
                 <div class="character-cb-with-label">
-                    <input type="checkbox" class="character-cb" id="uppercase-cb" checked>
+                    <input type="checkbox" id="uppercase-cb" onclick="styleGenerateBtn()" checked>
                     <label for="uppercase-cb" >Uppercase letters</label>
                 </div>
                 <div class="character-cb-with-label">
-                    <input type="checkbox" class="character-cb" id="lowercase-cb" checked>
+                    <input type="checkbox" id="lowercase-cb" onclick="styleGenerateBtn()" checked>
                     <label for="lowercase-cb" >Lowercase letters</label>
                 </div>
                 <div class="character-cb-with-label">
-                    <input type="checkbox" class="character-cb" id="numbers-cb" checked>
+                    <input type="checkbox" id="numbers-cb" onclick="styleGenerateBtn()" checked>
                     <label for="numbers-cb" >Numbers</label>
                 </div>
                 <div class="character-cb-with-label">
-                    <input type="checkbox" class="character-cb" id="symbols-cb" checked>
+                    <input type="checkbox" id="symbols-cb" onclick="styleGenerateBtn()" checked>
                     <label for="symbols-cb" >Symbols</label>
                 </div>
             </div>
