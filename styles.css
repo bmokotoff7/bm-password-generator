@@ -6,7 +6,7 @@ body {
 
 #app-content {
     margin: 30px 40px;
-    width: 500px;
+    min-width: 500px;
 }
 
 #heading-text {
@@ -50,6 +50,7 @@ input[type = "checkbox"] {
     justify-content: center;
     align-items: center;
     font-size: large;
+    cursor: pointer;
 }
 
 input[type = "checkbox"]:hover {
@@ -109,23 +110,26 @@ input::-webkit-inner-spin-button {
     font-weight: 500;
     padding: 10px 16px;
     margin: 20px 0 30px;
+    cursor: pointer;
 }
 
 #generated-passwords {
     border-top: 2px solid #2F3E53;
     display: flex;
-    justify-content: space-between;
-    width: auto;
-    padding: 20px 0;
+    flex-direction: column;
+    min-width: 320px;
+    width: fit-content;
+    padding: 20px 10px;
 }
 
 .generated-password-field {
     background: #273549;
     border-radius: 6px;
-    width: 200px;
+    min-width: 200px;
     min-height: 20px;
-    text-align: center;
+    text-align: left;
     padding: 10px 15px;
+    cursor: pointer;
 }
 
 .password-text-dark {
