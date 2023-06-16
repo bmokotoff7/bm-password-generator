@@ -149,6 +149,12 @@ input[type=range]::-webkit-slider-thumb {
     padding: 20px 10px;
 }
 
+.password-with-copy-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .generated-password-field {
     background: #273549;
     border-radius: 6px;
@@ -158,6 +164,11 @@ input[type=range]::-webkit-slider-thumb {
     text-align: left;
     padding: 10px 15px;
     cursor: pointer;
+}
+
+.copy-text {
+    color: white;
+    padding: 0 20px;
 }
 
 .password-text-dark {

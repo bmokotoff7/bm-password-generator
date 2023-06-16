@@ -38,8 +38,14 @@
             </div>
             <button onclick="generatePasswords()" id="generate-password-btn">Generate passwords</button>
             <div id="generated-passwords">
-                <p class="generated-password-field password-text-dark" id="password1"></p>
-                <p class="generated-password-field password-text-dark" id="password2"></p>
+                <div class="password-with-copy-text">
+                    <p class="generated-password-field password-text-dark" id="password1" onclick="copyPassword(this.textContent, this.id)"></p>
+                    <p class="copy-text" id="password1-copy-text"></p>
+                </div>
+                <div class="password-with-copy-text">
+                    <p class="generated-password-field password-text-dark" id="password2" onclick="copyPassword(this.textContent, this.id)"></p>
+                    <p class="copy-text" id="password2-copy-text"></p>
+                </div>
             </div>
         </div>
         <script src="script.js"></script>
