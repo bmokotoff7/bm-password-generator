@@ -79,9 +79,13 @@ function styleGenerateBtn() {
         !numbersCheckboxEl.checked &&
         !symbolsCheckboxEl.checked) {
             generatePasswordBtnEl.style.background = "#2F3E53"
+            generatePasswordBtnEl.style.color = "#D5D4D8"
+            generatePasswordBtnEl.style.fontWeight = "400"
     }
     else {
         generatePasswordBtnEl.style.background = "#10B981"
+        generatePasswordBtnEl.style.color = "white"
+        generatePasswordBtnEl.style.fontWeight = "500"
     }
 }
 

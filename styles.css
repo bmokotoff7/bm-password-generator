@@ -96,13 +96,13 @@ input[type = "checkbox"]:checked::after {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 #length-slider {
     margin: 0 5px;
-    width: 210px;
+    width: 200px;
 }
 
 .input[type=range] {
@@ -164,6 +164,7 @@ input[type=range]::-webkit-slider-thumb {
     text-align: left;
     padding: 10px 15px;
     cursor: pointer;
+    color: #55F991;
 }
 
 .copy-text {
@@ -171,11 +172,17 @@ input[type=range]::-webkit-slider-thumb {
     padding: 0 20px;
 }
 
-.password-text-dark {
-    color: #55F991;
+#theme-selection {
+    color: #D5D4D8;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
 }
 
-.password-text-light {
-    color: #5DEF92;
+#theme-title {
+    margin: 3px 0;
 }
 
+.theme-btn {
+    margin: 3px 0;
+}
