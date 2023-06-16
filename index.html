@@ -11,8 +11,8 @@
         <div id="app-content">
             <h1 id="heading-text">Generate a <br><span id="heading-green-text">random password</span></h1>
             <p class="subheading-text">Never use an insecure password again.</p>
-            <!-- <p class="subheading-text">Select character groups and a password length.<br> -->
-                <!-- Click the generated password to copy to your clipboard.</p> -->
+            <p class="subheading-text">Select character groups and a password length.<br>
+                Click the generated passwords to copy to your clipboard.</p>
             <div id="character-selection">
                 <div class="character-cb-with-label">
                     <input type="checkbox" id="uppercase-cb" onclick="styleGenerateBtn()" checked>
@@ -33,7 +33,8 @@
             </div>
             <div id="password-length-selection">
                 <label for="length-input">Password Length:</label>
-                <input type="number" id="length-input" value="12">
+                <input type="number" id="length-input" value="12" oninput="updateSliderPosition(this.value)">
+                <input type="range" id="length-slider" value="12" min="8" max="50" step="1" oninput="updateLength(this.value)">
             </div>
             <button onclick="generatePasswords()" id="generate-password-btn">Generate passwords</button>
             <div id="generated-passwords">
